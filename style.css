@@ -1,0 +1,152 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: rgb(63, 63, 63);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(156, 172, 164, 0.683);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    height: 400px;
+    width: 300px;
+    border-radius: 25px;
+    padding: 4rem;
+}
+
+.i{
+    height: 30px;
+    width: 30px;
+    padding-top: 0.5rem;
+    filter: invert(100%);
+}
+
+form{
+    padding: 2rem;
+    margin: 2rem 0 2rem 0;
+}
+
+.amount{
+    background-color: hsl(0, 1%, 23%);
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    height: 40px;
+    width: 150px;
+    padding: 5px;
+    padding-left: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.inputAmounts{
+    display: flex;
+    justify-content: space-around;
+    gap: 0.5rem;
+}
+
+.country{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 3rem;
+    margin-top: 25px;
+}
+
+.selectCountry .flag{
+    max-width: 2rem;
+}
+
+.selectCountry{
+    border: none;
+    outline: none;
+    padding: 5px;
+    display: flex;
+    gap: 10px;
+    background-color: hsl(0, 1%, 23%);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.countryCode{
+    width: auto;
+    font-size: 1rem;
+    background-color: hsl(0, 1%, 23%);
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+
+
+.heading{
+    color: white;
+    font-size: 2rem;
+    font-weight: bolder;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+.msg{
+    display: flex;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.2rem;
+    font-weight: bolder;
+    margin-top: 3rem;
+}
+
+
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+}
+
+.exchangeBtn{
+    height: 50px;
+    width: 150px;
+    background-color: hsl(283, 71%, 48%);
+    border: none;
+    font-size: 1.15rem;
+    border-radius: 10px;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
