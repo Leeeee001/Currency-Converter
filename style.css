@@ -93,8 +93,8 @@ form{
 
 
 .heading{
-    color: white;
-    font-size: 2rem;
+    color: hsl(283, 71%, 48%);
+    font-size: 1.9rem;
     font-weight: bolder;
     display: flex;
     justify-content: center;
