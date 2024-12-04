@@ -5,7 +5,8 @@ const btn = document.querySelector(".exchangeBtn");
 const fromCurr = document.getElementById("from");
 const toCurr = document.getElementById("to");
 const msg = document.querySelector(".msg")
-const outPut = document.querySelector(".inputAmounts input[name='to']");
+const toPut = document.querySelector(".inputAmounts input[name='to']");
+const fromPut = document.querySelector(".inputAmounts input[name='from']");
 
 
 
@@ -16,7 +17,7 @@ for(let select of selectCountry) {
         newOption.innerText = curCode;
         newOption.value = curCode;
         if(select.name === "from" && curCode === "USD") {
-            newOption.selected = "selected";
+            newOption.selected = "selected";      
         }else if(select.name === "to" && curCode === "INR") {
             newOption.selected = "selected";
         }
@@ -31,6 +32,7 @@ for(let select of selectCountry) {
 const changeFlag = (element) => {
     let curCode = element.value;
     let countryCode = countryList[curCode];
+    console.log(countryCode);
     let newSrc = `https://flagsapi.com/${countryCode}/shiny/64.png`;
     let img = element.parentElement.querySelector("img");
     img.src = newSrc;
@@ -45,14 +47,14 @@ btn.addEventListener("click", async(e) => {
         amtValue = 1;
         amount.value = "1";
     }
-    // console.log(fromCurr.value, "to" , toCurr.value); 
+    console.log(fromCurr.value, "to" , toCurr.value); 
     const URL = `https://api.currencyapi.com/v3/latest?${key}&base_currency=${fromCurr.value}&currencies=${toCurr.value}`;
     let res = await fetch(URL);
     let data = await res.json();
     let rate = data.data[toCurr.value].value
     let finalAmount = amtValue * rate;
     msg.innerText = `1 ${fromCurr.value} = ${rate} ${toCurr.value}`;
-    outPut.value = finalAmount;
+    toPut.value = finalAmount;
     // console.log(finalAmount);
 })
 
